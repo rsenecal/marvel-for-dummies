@@ -21,11 +21,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
 }
 
 #marvel-description {
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1em;
+    padding: 1em;
 }
 
 .columns{
