@@ -7,13 +7,6 @@ var vineAPIKey = "84b5c7942b49eb33ea48d45716e0e2336811cd22"
 var vineRequestUrl = "https://comicvine.gamespot.com/api/characters/?api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON&limit=10"
 
 
-fetch(marvelRequestUrl)
-.then (function(response){
-    return response.json();
-})
-.then (function(data){
-    console.log(data);
-})
 
 // DEPENDENCIES
     // CSS framework 
