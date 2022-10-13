@@ -9,13 +9,6 @@ var vineRequestUrl = "https://comicvine.gamespot.com/api/characters/?api_key=84b
 var marvelChars = ['Spider-man', 'Iron man', 'Hulk', 'Thanos', 'Black Panther', 'Wolverine', 'Doctor Strange', 'Luke Cage', 'Silver Surfer'];
 
 
-fetch(marvelRequestUrl)
-.then (function(response){
-    return response.json();
-})
-.then (function(data){
-    console.log(data);
-})
 
 
 function autocompleteMatch(input) {
