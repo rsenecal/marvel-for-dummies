@@ -114,22 +114,58 @@
     <section class="section is-small">
       <!-- box -->
       <div class="favorite-characters box">
-        <h2 class="has-text-centered py-1 is-size-3">Favorite Characters</h2>
+        <h2 class="has-text-centered py-1 is-size-4">Favorite Characters</h2>
+          <!-- if nothing has been saved yet, replace text with "Save a character to your favorites to come back quickly" -->
+        <h3 class="has-text-centered py-1 is-size-6" id="instructions">Click on an image below to navigate back to your favorite characters pages</h3>
         <!-- cards container -->
         <div class="cards-container">
-          <!-- if nothing has been saved, we should clear the contents of class character-card-->
-              <!-- could add text "Save a character to your favorites to come back quickly" -->
+          <!-- if nothing has been saved yet, we will clear the contents of class character-card-->
           <!-- if character has been saved, we need to get the name & image from localstorage-->
-          <div class="card character-card">
+
+          <div class="card character-card" id="char-card-1">
             <div class="card-header">
-              <p class="card-header-title text is-centered" id="character-name">Character Name</p>
+              <p class="card-header-title text is-centered" id="char-name-1">Character Name 1</p>
             </div>
             <div class="card-image">
               <figure class="image is-square">
-                <img src="" alt="">
+                <img id="char-image-1" src="" alt="">
               </figure>
             </div>
           </div>
+
+          <div class="card character-card" id="char-card-2">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-2">Character Name 2</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-2" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div class="card character-card" id="char-card-3">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-3">Character Name 3</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-3" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div class="card character-card" id="char-card-4">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-4">Character Name 4</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-4" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
