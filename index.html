@@ -105,11 +105,36 @@
           </div>
         </div>
 
+        <div id="save-button" class = "has-text-centered py-4">
+          <button class="button is-link is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
+        </div>
       </section>
+    
+    <!--Favorites section -->
+    <section class="section is-small">
+      <!-- box -->
+      <div class="favorite-characters box">
+        <h2 class="has-text-centered py-1 is-size-3">Favorite Characters</h2>
+        <!-- cards container -->
+        <div class="cards-container">
+          <!-- if nothing has been saved, we should clear the contents of class character-card-->
+          <!-- if character has been saved, we need to get the name & image from localstorage-->
+          <div class="card character-card">
 
-      <div id="save-button" class = "has-text-centered py-4">
-        <button class="button is-link is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="character-name">Character Name</p>
+            </div>
+
+            <div class="card-image">
+              <figure class="image is-square">
+                <img src="" alt="">
+              </figure>
+            </div>
+
+          </div>
+        </div>
       </div>
+    </section>
 
   <footer>Marvel for Dummies &copy; 2022</footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
