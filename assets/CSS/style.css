@@ -29,7 +29,7 @@ body {
   #char-search ul li:hover {
     background: #eee;
   }
-  
+
 .cards-container {
     display: flex;
 }
@@ -47,6 +47,7 @@ body {
     padding: 1em;
 }
 
+
 .columns{
     margin: .5rem;
     padding: .5rem;
@@ -54,4 +55,9 @@ body {
 
 .card-header {
     background-color: lemonchiffon;
+}
+
+.favorite-button {
+    display: flex;
+    justify-content: center;
 }
