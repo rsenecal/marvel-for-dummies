@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Marvel for Dummies</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/assets/CSS/style.css">
+    <script src="https://use.fontawesome.com/501510d818.js"></script>
   </head>
   <body>
     <section class="hero is-primary is-medium">
@@ -18,9 +19,6 @@
                   <h1>Marvel For Dummies</h1>
                 </a>
                 <span class="navbar-burger" data-target="navbarMenuHeroA">
-                  <span></span>
-                  <span></span>
-                  <span></span>
                 </span>
               </div>
             </div>
@@ -30,30 +28,89 @@
       
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-          <div class="container has-text-centered">
-            <div class="panel-block">
-            <p class="control has-icons-left">
-            <input class="input is-danger" type="text" placeholder="Search for a Marvel Character">
-            <span class="icon is-left">
-                <i class="fas fa-search" aria-hidden="true"></i>
-            </span>
-            </p>
-         </div>
+
+          <div class="container">
+              <p class="control">
+                <input class="input is-info is-large" id="char-search" placeholder="Marvel Character">
+                <input type="hidden" id="char-id">
+              </p>
           </div>
         </div>
-        </div>
+      </div>
+      
       </section>
       <section class="container">
         <figure class="image is-16x9">
-            <img src="https://via.placeholder.com/500x150.png?text=Image+of+Hero">
+            <img id="featured-image" src="https://via.placeholder.com/500x150.png?text=Image+of+Hero">
           </figure>
           <div class="favorite-button">
             <button>Saved to favorites</button>
           </div>
       </section>
 
-      <footer>Marvel for Dummies &copy; 2022</footer>
+      <!-- Main content: will be in the middle -->
+      <section class="section is-medium">
+      <!-- Marvel content: will be in the middle -->
+        <div class="box" id="marvel-info">
+          <div class="description has-text-left" id="marvel-description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni est reprehenderit possimus, dolorem tempora cum iure culpa repellendus non quis eius nisi repellat quaerat dicta tenetur iste consequatur quidem omnis?</div>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-header" id="marvel-comics">
+                <p class="card-header-title is-centered" id="comics-title">Comics</p>
+              </div>
+              <div class="card-content">
+                <ul class="comics-links" id="comics-links">
+                  <li>Comic 1</li>
+                  <li>Comic 2</li>
+                  <li>Comic 3</li>
+                </ul>
+              </div>
+            </div>
 
+            <div class="card">
+              <div class="card-header" id="marvel-series">
+                <p class="card-header-title is-centered" id="series-title">Series</p>
+              </div>
+              <div class="card-content">
+                <ul class="series-links" id="series-links">
+                  <li>Series 1</li>
+                  <li>Series 2</li>
+                  <li>Series 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- Comic vine content: will be in the middle -->
+         </div>
+          <div class="column">
+            <div id="vine-facts">
+              <ul id="vine-list">
+                <li id="vine-real-name and display real name"></li>
+                <li id="vine-origin and display origin"></li>
+                <li id="vine-issue-name and display name of first issue"></li>
+                <li id="vine-issue-number and display number of first issue"></li>
+              </ul>
+            </div>    
+          </div>
+        </div>
+
+      </section>
+      <div id="save-button" class = "has-text-centered py-4">
+        <button class="button is-link is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
+      </div>
+
+    <div class="box" id="vine-info">
+          <div class="column">
+            <div id="vine-description">
+              <p id="vine-deck-and-display-deck">Vine Deck and Display Deck</p>
+        </div>
+
+  <footer>Marvel for Dummies &copy; 2022</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./assets/JS/script.js"></script>
+    
 </body>
 </html>
