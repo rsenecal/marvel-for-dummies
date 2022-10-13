@@ -29,7 +29,7 @@ body {
   #char-search ul li:hover {
     background: #eee;
   }
-  
+
 .cards-container {
     display: flex;
 }
@@ -38,6 +38,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+}
+=======
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
 }
@@ -47,6 +49,7 @@ body {
     padding: 1em;
 }
 
+
 .columns{
     margin: .5rem;
     padding: .5rem;
@@ -55,3 +58,4 @@ body {
 .card-header {
     background-color: lemonchiffon;
 }
+
