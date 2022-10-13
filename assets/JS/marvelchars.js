@@ -1,4 +1,5 @@
-[
+
+marvelChars = [
     "3-D Man",
     "A-Bomb",
     "A.I.M.",
@@ -1251,4 +1252,4 @@
     "Zombie",
     "Zuras",
     "Zzzax"
-  ]
+  ];
