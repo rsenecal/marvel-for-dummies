@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -13,6 +14,22 @@ body {
     line-height: 1.5;
 }
 
+#char-search {
+    border: 1px dotted #ccc;
+    padding: 3px;
+  }
+  #char-search ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #char-search ul li {
+    padding: 5px 0;
+  }
+  #char-search ul li:hover {
+    background: #eee;
+  }
+  
 .cards-container {
     display: flex;
 }
