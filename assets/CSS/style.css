@@ -38,8 +38,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
-}
-=======
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
 }
@@ -59,3 +57,7 @@ body {
     background-color: lemonchiffon;
 }
 
+.favorite-button {
+    display: flex;
+    justify-content: center;
+}
