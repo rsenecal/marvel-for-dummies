@@ -1,13 +1,12 @@
 
 var marvelRequestUrl = "https://gateway.marvel.com:443/v1/public/characters?apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
 
-var marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=100&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4";
+var marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=100&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
 
-var marvelAPIKey = "abdfd77b47499bf8bf3a7ee7d53b30a4"
+// var marvelAPIKey = "abdfd77b47499bf8bf3a7ee7d53b30a4"
 
-var vineAPIKey = "84b5c7942b49eb33ea48d45716e0e2336811cd22"
+// var vineAPIKey = "84b5c7942b49eb33ea48d45716e0e2336811cd22"
 var vineRequestUrl = "https://comicvine.gamespot.com/api/characters/?api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON&limit=10"
-let charName ="";
 
 $( function() {
 
@@ -43,8 +42,7 @@ $( function() {
 
     $( "#char-search" ).autocomplete({
       minLength: 0,
-      // source: marvelChars,
-      source: charName,
+      source: marvelChars,
       focus: function( event, ui ) {
         $( "#char-search" ).val( ui.item.name );
         return false;
@@ -65,13 +63,8 @@ $( function() {
         .appendTo( ul );
     };
   } 
-  // just calling the Marvel API Here to see the data
+
   );
-
-
-
-
-
 
 // DEPENDENCIES
     // CSS framework 
@@ -85,21 +78,16 @@ $( function() {
 function getResultsMarvel() {
   // console.log(marvelCharNameUrl.name);
 
-  fetch(marvelCharNameUrl).then(function(response){
+  fetch(marvelCharNameUrl, {
+    // method : "GET",
+    // mode: 'no-cors'
+  }).then(function(response){
+  
     if (response.status == 200){
       response.json().then(function(marvelData){
         if(marvelData.data.count !==0){
-          var marvelResults = marvelData.data.results;
-          // ** Creating a Variable with Character Name only **
-          // for (i=0; i< marvelResults.length; i++ ) {
-          //   charName += marvelResults[i].name + ", ";
-
-          // }
-           
-          // charName = JSON.stringify(marvelResults);
-          
+          var marvelResults = marvelData.data.results;          
           console.log ("Data from Marvel: ", marvelResults );
-          // console.log ("Data from Marvel: ",  marvelData.)
         }
       }
       
