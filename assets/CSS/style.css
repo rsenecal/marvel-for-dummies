@@ -58,6 +58,16 @@ section.section.is-medium.info-container {
     background-color: rgb(243, 46, 46);
 }
 
+#vine-description,
+#vine-facts {
+    background-color: rgb(243, 46, 46);
+}
+#deck-title,
+#vine-facts {
+    color: whitesmoke
+}
+
+
 #comics-title,
 #series-title { 
     color: #eee;
