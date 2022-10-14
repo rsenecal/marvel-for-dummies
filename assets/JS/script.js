@@ -1,5 +1,6 @@
 
-var marvelRequestUrl = "https://gateway.marvel.com:443/v1/public/characters?apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
+var marvelRequestUrl = "https://gateway.marvel.com:443/v1/public/characters?"
+var marvelApiKey  = "abdfd77b47499bf8bf3a7ee7d53b30a4"
 
 var marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=100&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
 
@@ -8,11 +9,35 @@ var vineRequestUrl = "https://comicvine.gamespot.com/api/characters/?api_key=84b
 
 
 $( function() {
-  $( "#tags" ).autocomplete({
-    source: marvelChars //availableTags
+  $( "#char-search" ).autocomplete({
+    source: marvelChars,
+    minLength: 3,
+    select: function( event, ui){
+      $("#char-search").val(ui.item.value);
+      var selectedChar = ui.item.value;
+      getResultsMarvel(selectedChar);
+      return false;
+    }
   });
+  
 } );
 
+getResultsMarvel();
+
+function getResultsMarvel(selectedChar)
+ {
+  let apiLink = `https://gateway.marvel.com:443/v1/public/characters?name=${ selectedChar }&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
+  console.log("API LINK : " + apiLink);
+  fetch(apiLink).then(function(response){
+    if (response.status == 200){
+      response.json().then(function(marvelData){
+        var marvelResults = marvelData.data.results;
+        console.log("Data from marvel: ", marvelResults);
+      })
+    }
+  })
+  // console.log("Character Name: " + charName);
+}
 
 // DATA
 
