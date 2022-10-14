@@ -6,22 +6,30 @@
     <title>Marvel for Dummies</title>
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- <link rel = "stylesheet" href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" > -->
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+  
+
     <script src="https://use.fontawesome.com/501510d818.js"></script>
   </head>
   <body>
-    <section class="hero is-primary is-medium">
+    <section class="hero is-primary is-small">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
             <div class="container">
               <div class="navbar-brand p-3">
-                  <img src="./assets/images/logo.png" width="290" height="115">
+                  <img id="logo" src="./assets/images/logo.png" width="290" height="115">
                 <span class="navbar-burger" data-target="navbarMenuHeroA">
                 </span>
               </div>
             </div>
             <div class="p-3 is-size-3">
-            <a class="button is-link is-rounded" href="#favorites-section">My Favorite Characters</a>
+            <a class="button is-link is-rounded" href="#favorites-section" id="favorite-characters">My Favorite Characters</a>
             </div>
           </nav>
         </div>
@@ -31,7 +39,7 @@
           <div class="container">
               <p class="control">
                 <input class="input is-info is-large" id="char-search" placeholder="Marvel Character">
-                <input type="hidden" id="char-id">
+                <!-- <input type="hidden" id="char-id"> -->
               </p>
           </div>
         </div>
@@ -39,16 +47,13 @@
 
       </section>
       <section class="container">
-        <figure class="image is-16x9">
+        <figure class="image is-10x5">
             <img id="featured-image" src="https://via.placeholder.com/500x150.png?text=Image+of+Hero">
           </figure>
-          <div class="favorite-button">
-            <button>Saved to favorites</button>
-          </div>
       </section>
 
       <!-- Main content: will be in the middle -->
-      <section class="section is-medium">
+      <section class="section is-medium info-container">
       <!-- Marvel content: will be in the middle -->
         <div class="box" id="marvel-info">
           <div class="description has-text-left" id="marvel-description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni est reprehenderit possimus, dolorem tempora cum iure culpa repellendus non quis eius nisi repellat quaerat dicta tenetur iste consequatur quidem omnis?</div>
@@ -85,6 +90,7 @@
 
       <div class="box" id="vine-info">
         <div class="cards-container">
+
           <div class="card">
             <div class="card-header" id="comic-vine">
               <p class="card-header-title is-centered" id="deck-title">What the Marvel Universe fans are saying</p>
@@ -116,7 +122,8 @@
         </div>
       </div>
     </div>
-
+      </section>
+      
       <section>
           <div id="save-button" class = "has-text-centered py-4">
             <button class="button is-link is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
@@ -185,7 +192,8 @@
   <footer>Marvel for Dummies &copy; 2022</footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="./assets/JS/script.js"></script>
 
+    <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/marvelchars.js"></script>
 </body>
 </html>

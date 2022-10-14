@@ -1,4 +1,5 @@
 
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -16,22 +17,77 @@ body {
 
 #char-search {
     border: 1px dotted #ccc;
-    padding: 3px;
-  }
-  #char-search ul {
+    padding: 1em;
+    border-radius: 2em;
+}
+
+#char-search ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  #char-search ul li {
+}
+
+#char-search ul li {
     padding: 5px 0;
-  }
-  #char-search ul li:hover {
+}
+
+#char-search ul li:hover {
     background: #eee;
-  }
+}
+
+#logo {
+    margin-left: 2em;
+    border-radius: 1em;
+}
+
+#featured-image {
+    padding-top: 3em;
+}
+
+section.section.is-medium.info-container {
+    padding: 5em 1.5em;
+}
+
+#marvel-description {
+    margin: 1em;
+    padding: 1em;
+}
+
+#marvel-comics,
+#marvel-series {
+    background-color: rgb(243, 46, 46);
+}
+
+#comics-title,
+#series-title { 
+    color: #eee;
+}
+
+#char-name-1,
+#char-name-2,
+#char-name-3,
+#char-name-4 {
+    background-color: rgb(243, 46, 46);
+    color: #eee;
+}
+
+.hero-head {
+    background-color: #16f7d5;
+    margin-top: 1em;
+}
+
+#favorite-characters {
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+    padding: 1.5em;
+}
 
 .cards-container {
     display: flex;
+}
+
+.navbar-item {
+    font-size: 50px;
 }
 
 .card {
@@ -42,19 +98,9 @@ body {
     border-bottom-right-radius: 2em;
 }
 
-#marvel-description {
-    margin: 1em;
-    padding: 1em;
-}
-
-
 .columns{
     margin: .5rem;
     padding: .5rem;
-}
-
-.card-header {
-    background-color: lemonchiffon;
 }
 
 .favorite-button {
@@ -62,14 +108,14 @@ body {
     justify-content: center;
 }
 
-
-footer {
-    text-align: center;
+.favorite-characters {
+    display: flex;
 }
 
-
-.favorite-characters{
-    display: flex;
+.favorite-characters h2,
+.favorite-characters h3 {
+    color: #eee;
+    background-color: rgb(66, 82, 165);
 }
 
 .character-card {
@@ -78,4 +124,47 @@ footer {
     width: 25%;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 365px) {
+    #logo {
+        margin: 0 auto;
+    }
+
+    #char-name-1,
+    #char-name-2,
+    #char-name-3,
+    #char-name-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #favorite-characters {
+        margin-left: 5%;
+        margin-bottom: 1.5em;
+    }
+
+    .control {
+        margin-left: 0 auto;
+    }
+
+    .hero.is-small .hero-body {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 765px){
+    #logo {
+        margin-left: 2%;
+    }
+
+    #favorite-characters {
+        margin-left: 1%;
+        margin-bottom: 1.5em;
+        padding: 1%;
+    }
 }
