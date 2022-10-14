@@ -9,20 +9,20 @@
     <script src="https://use.fontawesome.com/501510d818.js"></script>
   </head>
   <body>
-    <section class="hero is-primary is-medium">
+    <section class="hero is-primary is-small">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
           <nav class="navbar">
             <div class="container">
-              <div class="navbar-brand">
-                <a class="navbar-item">
-                  <h1>Marvel For Dummies</h1>
-                </a>
+              <div class="navbar-brand p-3">
+                  <img id="logo" src="./assets/images/logo.png" width="290" height="115">
                 <span class="navbar-burger" data-target="navbarMenuHeroA">
                 </span>
               </div>
             </div>
-            <button>Favorite Characters</button>
+            <div class="p-3 is-size-3">
+            <a class="button is-link is-rounded" href="#favorites-section">My Favorite Characters</a>
+            </div>
           </nav>
         </div>
 
@@ -40,16 +40,13 @@
 
       </section>
       <section class="container">
-        <figure class="image is-16x9">
+        <figure class="image is-10x5">
             <img id="featured-image" src="https://via.placeholder.com/500x150.png?text=Image+of+Hero">
           </figure>
-          <div class="favorite-button">
-            <button>Saved to favorites</button>
-          </div>
       </section>
 
       <!-- Main content: will be in the middle -->
-      <section class="section is-medium">
+      <section class="section is-medium info-container">
       <!-- Marvel content: will be in the middle -->
         <div class="box" id="marvel-info">
           <div class="description has-text-left" id="marvel-description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni est reprehenderit possimus, dolorem tempora cum iure culpa repellendus non quis eius nisi repellat quaerat dicta tenetur iste consequatur quidem omnis?</div>
@@ -83,33 +80,101 @@
         </div>
 
       <!-- Comic vine content: will be in the middle -->
-         </div>
-          <div class="column">
-            <div id="vine-facts">
-              <ul id="vine-list">
-                <li id="vine-real-name and display real name"></li>
-                <li id="vine-origin and display origin"></li>
-                <li id="vine-issue-name and display name of first issue"></li>
-                <li id="vine-issue-number and display number of first issue"></li>
-              </ul>
+
+      <div class="box" id="vine-info">
+        <div class="cards-container">
+        <div class="card">
+          <div class="card-content">
+            <div class="column">
+              <div id="vine-description">
+                <p id="vine-deck-and-display-deck">Vine Deck</p>
+              </div>
             </div>
           </div>
         </div>
-
-
-        <div class="box" id="vine-info">
-          <div class="column">
-            <div id="vine-description">
-              <p id="vine-deck-and-display-deck">Vine Deck and Display Deck</p>
+        
+        <div class="card">
+          <div class="card-content">
+            <div class="column">
+              <div id="vine-facts">
+                <ul id="vine-list">
+                  <li id="vine-name name">name</li>
+                  <li id="vine-real-name real-name">real name</li>
+                  <li id="vine-origin and origin">origin</li>
+                  <li id="vine-issue-name name-of-first-issue">first appeared in issue</li>
+                  <li id="vine-issue-number number-of-first-issue">first appeared in issue date</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-
+          
       </section>
+      
+      <section>
+          <div id="save-button" class = "has-text-centered py-4">
+            <button class="button is-link is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
+          </div>
+      </section>
+    
+    <!--Favorites section -->
+    <section class="section is-small" id="favorites-section">
+      <!-- box -->
+      <div class="favorite-characters box">
+        <h2 class="has-text-centered py-1 is-size-4">Favorite Characters</h2>
+          <!-- if nothing has been saved yet, replace text with "Save a character to your favorites to come back quickly" -->
+        <h3 class="has-text-centered py-1 is-size-6" id="instructions">Click on an image below to navigate back to your favorite characters pages</h3>
+        <!-- cards container -->
+        <div class="cards-container">
+          <!-- if nothing has been saved yet, we will clear the contents of class character-card-->
+          <!-- if character has been saved, we need to get the name & image from localstorage-->
 
-      <div id="save-button" class = "has-text-centered py-4">
-        <button class="button is-link is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
+          <div class="card character-card" id="char-card-1">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-1">Character Name 1</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-1" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div class="card character-card" id="char-card-2">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-2">Character Name 2</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-2" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div class="card character-card" id="char-card-3">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-3">Character Name 3</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-3" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div class="card character-card" id="char-card-4">
+            <div class="card-header">
+              <p class="card-header-title text is-centered" id="char-name-4">Character Name 4</p>
+            </div>
+            <div class="card-image">
+              <figure class="image is-square">
+                <img id="char-image-4" src="" alt="">
+              </figure>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </section>
 
   <footer>Marvel for Dummies &copy; 2022</footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
