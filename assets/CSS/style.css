@@ -81,6 +81,10 @@ section.section.is-medium.info-container {
     display: flex;
 }
 
+.navbar-item {
+    font-size: 50px;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -97,4 +101,20 @@ section.section.is-medium.info-container {
 .favorite-button {
     display: flex;
     justify-content: center;
+}
+
+.favorite-characters {
+    display: flex;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+footer {
+    text-align: center;
 }
