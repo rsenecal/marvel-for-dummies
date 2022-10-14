@@ -1,9 +1,16 @@
 
+:root {
+    --site-background: radial-gradient(circle, rgba(169,235,236,1) 0%, rgba(253,187,45,1) 100%);
+    --cardheaderbackground: #79ccdf;
+    --cardtitlecolor: #fac63a;
+    --btncolor: #cd2c35;
+}
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 
     /* border : red solid 1px; */
 }
@@ -11,8 +18,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 50px;
-    background-color: #16f7d5;
+    /* background-color: #16f7d5; */
     line-height: 1.5;
+    background: var(--site-background)
 }
 
 #char-search {
@@ -57,7 +65,7 @@ section.section.is-medium.info-container {
 #marvel-series, 
 #comic-vine-deck,
 #comic-vine-facts {
-    background-color:  rgb(243, 46, 46);
+    background-color: var(--cardheaderbackground);
 }
 
 #vine-description,
@@ -81,12 +89,18 @@ section.section.is-medium.info-container {
 #char-name-2,
 #char-name-3,
 #char-name-4 {
-    background-color: rgb(243, 46, 46);
+    background-color: var(--cardtitlecolor);
     color: #eee;
 }
 
+.button-custom {
+    background-color: var(--btncolor);
+    border-color: transparent;
+    color: #fff;
+}
+
 .hero-head {
-    background-color: #16f7d5;
+    /* background: var(--site-background); */
     margin-top: 1em;
 }
 
@@ -108,8 +122,8 @@ section.section.is-medium.info-container {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 .columns{
@@ -129,7 +143,7 @@ section.section.is-medium.info-container {
 .favorite-characters h2,
 .favorite-characters h3 {
     color: #eee;
-    background-color: rgb(66, 82, 165);
+    background-color: var(--cardheaderbackground)
 }
 
 .character-card {
