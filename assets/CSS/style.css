@@ -37,7 +37,6 @@ body {
 
 #logo {
     margin-left: 2em;
-    /* padding-left: 2em; */
     border-radius: 1em;
 }
 
@@ -107,6 +106,12 @@ section.section.is-medium.info-container {
     display: flex;
 }
 
+.favorite-characters h2,
+.favorite-characters h3 {
+    color: #eee;
+    background-color: rgb(66, 82, 165);
+}
+
 .character-card {
     display: flex;
     flex-direction: column;
@@ -117,4 +122,16 @@ section.section.is-medium.info-container {
 
 footer {
     text-align: center;
+}
+
+@media screen and (min-width: 365px) {
+    #logo {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 765px){
+    #logo {
+        margin-left: 2em;
+    }
 }
