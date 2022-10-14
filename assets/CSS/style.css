@@ -1,4 +1,5 @@
 
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -17,18 +18,64 @@ body {
 #char-search {
     border: 1px dotted #ccc;
     padding: 3px;
-  }
-  #char-search ul {
+    border-radius: 2em;
+}
+
+#char-search ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  #char-search ul li {
+}
+
+#char-search ul li {
     padding: 5px 0;
-  }
-  #char-search ul li:hover {
+}
+
+#char-search ul li:hover {
     background: #eee;
-  }
+}
+
+#logo {
+    margin-left: 2em;
+    /* padding-left: 2em; */
+    border-radius: 1em;
+}
+
+#featured-image {
+    padding-top: 3em;
+}
+
+section.section.is-medium.info-container {
+    padding: 5em 1.5em;
+}
+
+#marvel-description {
+    margin: 1em;
+    padding: 1em;
+}
+
+#marvel-comics,
+#marvel-series {
+    background-color: rgb(243, 46, 46);
+}
+
+#comics-title,
+#series-title { 
+    color: #eee;
+}
+
+#char-name-1,
+#char-name-2,
+#char-name-3,
+#char-name-4 {
+    background-color: rgb(243, 46, 46);
+    color: #eee;
+}
+
+.hero-head {
+    background-color: #16f7d5;
+    margin-top: 1em;
+}
 
 .cards-container {
     display: flex;
@@ -42,40 +89,12 @@ body {
     border-bottom-right-radius: 2em;
 }
 
-#marvel-description {
-    margin: 1em;
-    padding: 1em;
-}
-
-
 .columns{
     margin: .5rem;
     padding: .5rem;
 }
 
-.card-header {
-    background-color: lemonchiffon;
-}
-
 .favorite-button {
     display: flex;
     justify-content: center;
-}
-
-
-footer {
-    text-align: center;
-}
-
-
-.favorite-characters{
-    display: flex;
-}
-
-.character-card {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
 }
