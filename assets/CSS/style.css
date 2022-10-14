@@ -17,7 +17,7 @@ body {
 
 #char-search {
     border: 1px dotted #ccc;
-    padding: 3px;
+    padding: 1em;
     border-radius: 2em;
 }
 
@@ -76,6 +76,12 @@ section.section.is-medium.info-container {
     margin-top: 1em;
 }
 
+#favorite-characters {
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+    padding: 1.5em;
+}
+
 .cards-container {
     display: flex;
 }
@@ -127,6 +133,14 @@ footer {
 @media screen and (min-width: 365px) {
     #logo {
         margin-left: 0;
+    }
+
+    #char-name-1,
+    #char-name-2,
+    #char-name-3,
+    #char-name-4 {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
