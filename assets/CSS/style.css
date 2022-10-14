@@ -132,7 +132,7 @@ footer {
 
 @media screen and (min-width: 365px) {
     #logo {
-        margin-left: 0;
+        margin: 0 auto;
     }
 
     #char-name-1,
@@ -142,10 +142,29 @@ footer {
         padding-left: 0;
         padding-right: 0;
     }
+
+    #favorite-characters {
+        margin-left: 5%;
+        margin-bottom: 1.5em;
+    }
+
+    .control {
+        margin-left: 0 auto;
+    }
+
+    .hero.is-small .hero-body {
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 765px){
     #logo {
-        margin-left: 2em;
+        margin-left: 2%;
+    }
+
+    #favorite-characters {
+        margin-left: 1%;
+        margin-bottom: 1.5em;
+        padding: 1%;
     }
 }
