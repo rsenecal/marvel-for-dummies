@@ -6,7 +6,6 @@ var marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?ord
 
 var vineRequestUrl = "https://comicvine.gamespot.com/api/characters/?api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON&limit=10"
 
-
 $( function() {
   $( "#char-search" ).autocomplete({
     source: marvelChars,
@@ -70,6 +69,7 @@ function saveFavorite() {
       // add name to favorite card #1
       charName1.text(currentFavs[0]);
       // add image to favorite card #1
+      // shift other favorites to next card
       
 
 }
