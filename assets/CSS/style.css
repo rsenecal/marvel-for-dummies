@@ -17,7 +17,7 @@ body {
 
 #char-search {
     border: 1px dotted #ccc;
-    padding: 3px;
+    padding: 1em;
     border-radius: 2em;
 }
 
@@ -37,7 +37,6 @@ body {
 
 #logo {
     margin-left: 2em;
-    /* padding-left: 2em; */
     border-radius: 1em;
 }
 
@@ -77,6 +76,12 @@ section.section.is-medium.info-container {
     margin-top: 1em;
 }
 
+#favorite-characters {
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+    padding: 1.5em;
+}
+
 .cards-container {
     display: flex;
 }
@@ -107,6 +112,12 @@ section.section.is-medium.info-container {
     display: flex;
 }
 
+.favorite-characters h2,
+.favorite-characters h3 {
+    color: #eee;
+    background-color: rgb(66, 82, 165);
+}
+
 .character-card {
     display: flex;
     flex-direction: column;
@@ -117,4 +128,24 @@ section.section.is-medium.info-container {
 
 footer {
     text-align: center;
+}
+
+@media screen and (min-width: 365px) {
+    #logo {
+        margin-left: 0;
+    }
+
+    #char-name-1,
+    #char-name-2,
+    #char-name-3,
+    #char-name-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 765px){
+    #logo {
+        margin-left: 2em;
+    }
 }
