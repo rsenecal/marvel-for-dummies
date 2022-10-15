@@ -37,6 +37,41 @@ function getResultsMarvel(selectedChar)
       response.json().then(function(marvelData){
         var marvelResults = marvelData.data.results;
         console.log("Data from marvel: ", marvelResults);
+
+        var description = marvelResults[0].description;
+        console.log("Description: ", description);
+        var El = document.getElementById("marvel-description");
+        El.textContent = description;
+
+        // var series = marvelResults[0].series.items[0].name;
+
+        var series1 = document.getElementById("series-1");
+        series1.textContent = marvelResults[0].series.items[1].name;
+        var series2 = document.getElementById("series-2");
+        series2.textContent = marvelResults[0].series.items[2].name;
+        var series3 = document.getElementById("series-3");
+        series3.textContent = marvelResults[0].series.items[3].name;
+
+
+        // for (i = 0; i <= getSeries.length; i++) {
+        //   var li = document.createElement("li"); // create li element.
+
+        //   li.innerHTML = marvelResults[0].series.items[0]; // assigning text to li using array value.
+
+        //   var seriesEl = document.getElementById("series-links");
+        //   seriesEl.appendChild(li); // append li to ul.
+        // }
+
+        // var comics = marvelResults[0].comics.items;
+        // console.log("Comics: ", comics);
+
+        var comics1 = document.getElementById("comics-1");
+        comics1.textContent = marvelResults[0].series.items[1].name;
+        var comics2 = document.getElementById("comics-2");
+        comics2.textContent = marvelResults[0].series.items[2].name;
+        var comics3 = document.getElementById("comics-3");
+        comics3.textContent = marvelResults[0].series.items[3].name;
+
       })
     }
   })
@@ -72,73 +107,8 @@ function getResultsGiphy(selectedChar)
   // console.log("Character Name: " + charName);
 }
 
-
-// getting data from comicvine
-// function getResultsComicVine(selectedChar){
-// let apiComicVine = `https://comicvine.gamespot.com/api/search/?query=${ selectedChar }&resources=character&api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON`
-// fetch(apiComicVine,{
-//   mode: "no-cors",
-//   method: "GET"
-// })
-// .then(function(response){
-//   if (response.status !== 200){
-//     response.json()
-//     .then(function(vineData){
-//       var vineResults = vineData.data.results;
-//       console.log("Data from comicvine: ", vineResults);
-//     }).catch( function(error){
-//       console.log(error);
-//     })
-//   }
-// }).catch( function(error){
-//   console.log(error);
-// })
-// }
-
-
-  // let apiGiphy = `https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=${selectedChar}&limit=3&offset=0&rating=g&lang=en`;
-
-  // // console.log("API LINK : " + apiMarvel);
-  // fetch(apiGiphy).then(function(response){
-  //   if (response.status == 200){
-  //     response.json().then(function(giphyData){
-  //       var giphyResults = giphyData.data.results;
-  //       console.log("Data from Giphy: ", giphyResults);
-  //     })
-  //   }
-  // })
-
-  // console.log("Character Name: " + charName);
-
-
-
-
-// function getResultsMCU (){
-
-// const settings = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": "https://mcu-comics-and-characters.p.rapidapi.com/mcu/characters",
-// 	"method": "GET",
-// 	"headers": {
-// 		"X-RapidAPI-Key": "850aa42b78msh83fc01adcf66e85p1a4493jsn33981f5f3798",
-// 		"X-RapidAPI-Host": "mcu-comics-and-characters.p.rapidapi.com"
-// 	}
-// };
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });
-// }
-
-// https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=ironman&limit=3&offset=0&rating=g&lang=en
-
-
-// DATA
-
 var favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) || [];
 
-// FUNCTIONS
 
 // get data from local storage
 function init () {

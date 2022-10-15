@@ -7,7 +7,7 @@
     <!-- <link rel="stylesheet" href="assets/CSS/style.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Slackey&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@
       <section class="section is-medium info-container">
       <!-- Marvel content: will be in the middle -->
         <div class="box" id="marvel-info">
-          <div class="description has-text-left" id="marvel-description" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni est reprehenderit possimus, dolorem tempora cum iure culpa repellendus non quis eius nisi repellat quaerat dicta tenetur iste consequatur quidem omnis?</div>
+          <div class="description has-text-left" id="marvel-description" ></div>
           <div class="cards-container">
             <div class="card">
               <div class="card-header" id="marvel-comics">
@@ -63,9 +63,9 @@
               </div>
               <div class="card-content">
                 <ul class="comics-links" id="comics-links">
-                  <li>Comic 1</li>
-                  <li>Comic 2</li>
-                  <li>Comic 3</li>
+                  <li id="comics-1">Comic 1</li>
+                  <li id="comics-1">Comic 2</li>
+                  <li id="comics-1">Comic 3</li>
                 </ul>
               </div>
             </div>
@@ -76,9 +76,9 @@
               </div>
               <div class="card-content">
                 <ul class="series-links" id="series-links">
-                  <li>Series 1</li>
-                  <li>Series 2</li>
-                  <li>Series 3</li>
+                  <li id="series-1">Series 1</li>
+                  <li id="series-2">Series 2</li>
+                  <li id="series-3">Series 3</li>
                 </ul>
               </div>
             </div>
@@ -100,7 +100,7 @@
                 </div>
               </div>
             </div>
-        
+
 
           <div class="card">
             <div class="card-header" id="comic-vine-facts">
@@ -121,13 +121,13 @@
       </div>
     </div>
       </section>
-      
+
       <section>
           <div id="save-button" class = "has-text-centered py-4">
             <button class="button button-custom is-rounded is-large is-centered py-1" id="save-fav">Save to favorites</button>
           </div>
       </section>
-    
+
     <!--Favorites section -->
     <section class="section is-small" id="favorites-section">
       <!-- box -->
@@ -135,7 +135,7 @@
 
           <!-- if nothing has been saved yet, replace text with "Save a character to your favorites to come back quickly" -->
         <h3 class="has-text-centered py-1 is-size-6" id="instructions">Click on a character below to navigate back to your favorites</h3>
-        
+
         <!-- cards container -->
         <div class="cards-container">
           <!-- if nothing has been saved yet, we will clear the contents of class character-card-->
