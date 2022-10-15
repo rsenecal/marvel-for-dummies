@@ -45,6 +45,18 @@ function getResultsMarvel(selectedChar)
 
 
 
+// save to favorites button
+
+// DEPENDENCIES
+
+var saveButton = $('#save-fav');
+var charSearchEl = $('#char-search');
+var charName1 = $('#char-name-1');
+var charName2 = $('#char-name-2');
+var charName3 = $('#char-name-3');
+var charName4 = $('#char-name-4');
+=======
+
 function getResultsGiphy(selectedChar)
  {
   let apiGiphy = `https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=marvel%20${ selectedChar }&limit=1&offset=0&rating=g&lang=en`
@@ -122,29 +134,46 @@ function getResultsGiphy(selectedChar)
 
 // https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=ironman&limit=3&offset=0&rating=g&lang=en
 
+
 // DATA
 
+var favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) || [];
+
 // FUNCTIONS
-// USER INTERACTIONS
-    // user selects a character from a searchable dropdown
-    // list of characters from marvel
-        // characters
-            // name
-    // marvel info on character
-        // characters
-            // description
-            // comics
-            // series
-            // thumbnail (if we want to use for favorites)
-        // image
-            // path
-    // comic vine info on character
-        // deck
-        // first_appeared_in_issue 
-            // name
-            // issue_number
-        // real_name
-        // origin
-            // name
+
+// get data from local storage 
+function init () {
+    // get items from local storage
+    // if no favorites
+      // clear contents of "cards-container"
+      // replace text of #instructions with "Save a character as a favorite to .."
+    // if favorites
+  renderSavedCharacters();
+}
+
+function saveFavorite() {
+    console.log(charSearchEl.val());
+    favoriteCharacters.unshift(charSearchEl.val());
+    console.log(favoriteCharacters);
+    localStorage.setItem("favoriteCharacters", JSON.stringify(favoriteCharacters));
+    renderSavedCharacters();
+
+      // shift other favorites to next card
       
+
+}
+
+function renderSavedCharacters() {
+  charName1.text(favoriteCharacters[0]);
+  charName2.text(favoriteCharacters[1]);
+  charName3.text(favoriteCharacters[2]);
+  charName4.text(favoriteCharacters[3]);
+}
+
 // INITIALIZATION
+saveButton.on('click', saveFavorite);
+init();
+
+
+
+      
