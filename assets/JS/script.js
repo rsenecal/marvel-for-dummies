@@ -107,73 +107,8 @@ function getResultsGiphy(selectedChar)
   // console.log("Character Name: " + charName);
 }
 
-
-// getting data from comicvine
-// function getResultsComicVine(selectedChar){
-// let apiComicVine = `https://comicvine.gamespot.com/api/search/?query=${ selectedChar }&resources=character&api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON`
-// fetch(apiComicVine,{
-//   mode: "no-cors",
-//   method: "GET"
-// })
-// .then(function(response){
-//   if (response.status !== 200){
-//     response.json()
-//     .then(function(vineData){
-//       var vineResults = vineData.data.results;
-//       console.log("Data from comicvine: ", vineResults);
-//     }).catch( function(error){
-//       console.log(error);
-//     })
-//   }
-// }).catch( function(error){
-//   console.log(error);
-// })
-// }
-
-
-  // let apiGiphy = `https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=${selectedChar}&limit=3&offset=0&rating=g&lang=en`;
-
-  // // console.log("API LINK : " + apiMarvel);
-  // fetch(apiGiphy).then(function(response){
-  //   if (response.status == 200){
-  //     response.json().then(function(giphyData){
-  //       var giphyResults = giphyData.data.results;
-  //       console.log("Data from Giphy: ", giphyResults);
-  //     })
-  //   }
-  // })
-
-  // console.log("Character Name: " + charName);
-
-
-
-
-// function getResultsMCU (){
-
-// const settings = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": "https://mcu-comics-and-characters.p.rapidapi.com/mcu/characters",
-// 	"method": "GET",
-// 	"headers": {
-// 		"X-RapidAPI-Key": "850aa42b78msh83fc01adcf66e85p1a4493jsn33981f5f3798",
-// 		"X-RapidAPI-Host": "mcu-comics-and-characters.p.rapidapi.com"
-// 	}
-// };
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });
-// }
-
-// https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=ironman&limit=3&offset=0&rating=g&lang=en
-
-
-// DATA
-
 var favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) || [];
 
-// FUNCTIONS
 
 // get data from local storage
 function init () {
