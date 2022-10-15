@@ -137,7 +137,7 @@ section.section.is-medium.info-container {
     justify-content: center;
 }
 
-.favorite-characters {
+.cards-container {
     display: flex;
 }
 
