@@ -45,17 +45,6 @@ function getResultsMarvel(selectedChar)
 
 
 
-// save to favorites button
-
-// DEPENDENCIES
-
-var saveButton = $('#save-fav');
-var charSearchEl = $('#char-search');
-var charName1 = $('#char-name-1');
-var charName2 = $('#char-name-2');
-var charName3 = $('#char-name-3');
-var charName4 = $('#char-name-4');
-
 function getResultsGiphy(selectedChar)
  {
   let apiGiphy = `https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=marvel%20${ selectedChar }&limit=1&offset=0&rating=g&lang=en`
@@ -133,6 +122,21 @@ function getResultsGiphy(selectedChar)
 
 // https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=ironman&limit=3&offset=0&rating=g&lang=en
 
+// save to favorites button
+
+// DEPENDENCIES
+
+var saveButton = $('#save-fav');
+var charSearchEl = $('#char-search');
+var charName1 = $('#char-name-1');
+var charName2 = $('#char-name-2');
+var charName3 = $('#char-name-3');
+var charName4 = $('#char-name-4');
+var charImage1 = $('#char-image-1');
+var charImage2 = $('#char-image-2');
+var charImage3 = $('#char-image-3');
+var charImage4 = $('#char-image-4');
+
 
 // DATA
 
@@ -142,11 +146,6 @@ var favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) 
 
 // get data from local storage
 function init () {
-    // get items from local storage
-    // if no favorites
-      // clear contents of "cards-container"
-      // replace text of #instructions with "Save a character as a favorite to .."
-    // if favorites
   renderSavedCharacters();
 }
 
@@ -156,10 +155,6 @@ function saveFavorite() {
     console.log(favoriteCharacters);
     localStorage.setItem("favoriteCharacters", JSON.stringify(favoriteCharacters));
     renderSavedCharacters();
-
-      // shift other favorites to next card
-
-
 }
 
 function renderSavedCharacters() {
@@ -169,10 +164,27 @@ function renderSavedCharacters() {
   charName4.text(favoriteCharacters[3]);
 }
 
+// add thumbnails to favorites
+  function getImage() {
+    var apiMarvel = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[0]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
+    fetch(apiMarvel)
+    .then(function(response){
+      return response.json();
+    })
+    .then (function(data){
+      console.log(data.data.results[0].thumbnail.path);
+      var imagePath = data.data.results[0].thumbnail.path;
+      var imageExt = data.data.results[0].thumbnail.extension;
+      var imageURL = imagePath + "." + imageExt; 
+      charImage1.attr('src', imageURL);
+    })
+    }
+    
+ 
+
+
 // INITIALIZATION
 saveButton.on('click', saveFavorite);
 init();
-
-
-
+getImage();
 

@@ -92,7 +92,7 @@ section.section.is-medium.info-container {
 #char-name-3,
 #char-name-4 {
     background-color: var(--cardtitlecolor);
-    color: #eee;
+    color: rgb(243, 46, 46);
 }
 
 .button-custom {
