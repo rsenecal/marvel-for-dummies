@@ -54,6 +54,9 @@ function getResultsMarvel(selectedChar)
         //   seriesEl.appendChild(li); // append li to ul.
         // }
 
+        var comics = marvelResults[0].comics;
+        console.log("Comics: ", comics);
+
       })
     }
   })
