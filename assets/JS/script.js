@@ -43,19 +43,29 @@ function getResultsMarvel(selectedChar)
         var El = document.getElementById("marvel-description");
         El.textContent = description;
 
-        var series = marvelResults[0].series;
-        console.log("Series: ", series);
-        // for (i = 0; i <= items.length; i++) {
+        // var series = marvelResults[0].series.items[0].name;
+
+        var series1 = document.getElementById("series-1");
+        series1.textContent = marvelResults[0].series.items[1].name;
+        var series2 = document.getElementById("series-2");
+        series2.textContent = marvelResults[0].series.items[2].name;
+        var series3 = document.getElementById("series-3");
+        series3.textContent = marvelResults[0].series.items[3].name;
+
+
+        // for (i = 0; i <= getSeries.length; i++) {
         //   var li = document.createElement("li"); // create li element.
 
-        //   li.innerHTML = item[i]; // assigning text to li using array value.
+        //   li.innerHTML = marvelResults[0].series.items[0]; // assigning text to li using array value.
 
         //   var seriesEl = document.getElementById("series-links");
         //   seriesEl.appendChild(li); // append li to ul.
         // }
 
-        var comics = marvelResults[0].comics;
-        console.log("Comics: ", comics);
+        // var comics = marvelResults[0].comics.items;
+        // console.log("Comics: ", comics);
+
+
 
       })
     }
