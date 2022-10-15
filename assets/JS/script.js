@@ -55,7 +55,6 @@ var charName1 = $('#char-name-1');
 var charName2 = $('#char-name-2');
 var charName3 = $('#char-name-3');
 var charName4 = $('#char-name-4');
-=======
 
 function getResultsGiphy(selectedChar)
  {

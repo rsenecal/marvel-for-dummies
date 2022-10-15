@@ -4,7 +4,8 @@
     --cardheaderbackground: #79ccdf;
     --cardtitlecolor: #fac63a;
     --btncolor: #cd2c35;
-    --sitefontfamily: 'Marvel', sans-serif;
+    --sitefontfamily: 'Slackey', cursive;
+    --sitefontfamily2: font-family: 'Bangers', cursive;
 }
 
 *{
@@ -98,6 +99,7 @@ section.section.is-medium.info-container {
     background-color: var(--btncolor);
     border-color: transparent;
     color: #fff;
+    font-family: var(--sitefontfamily);
 }
 
 .hero-head {
@@ -154,6 +156,7 @@ section.section.is-medium.info-container {
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
 }
+
 
 footer {
     text-align: center;
