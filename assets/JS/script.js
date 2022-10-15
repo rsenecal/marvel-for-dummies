@@ -23,7 +23,7 @@ $( function() {
       return false;
     }
   });
-  
+
 } );
 
 // getResultsMarvel();
@@ -55,7 +55,6 @@ var charName1 = $('#char-name-1');
 var charName2 = $('#char-name-2');
 var charName3 = $('#char-name-3');
 var charName4 = $('#char-name-4');
-=======
 
 function getResultsGiphy(selectedChar)
  {
@@ -89,16 +88,16 @@ function getResultsGiphy(selectedChar)
 //       console.log("Data from comicvine: ", vineResults);
 //     }).catch( function(error){
 //       console.log(error);
-//     }) 
+//     })
 //   }
 // }).catch( function(error){
 //   console.log(error);
-// }) 
+// })
 // }
 
 
   // let apiGiphy = `https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=${selectedChar}&limit=3&offset=0&rating=g&lang=en`;
-  
+
   // // console.log("API LINK : " + apiMarvel);
   // fetch(apiGiphy).then(function(response){
   //   if (response.status == 200){
@@ -141,7 +140,7 @@ var favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) 
 
 // FUNCTIONS
 
-// get data from local storage 
+// get data from local storage
 function init () {
     // get items from local storage
     // if no favorites
@@ -159,7 +158,7 @@ function saveFavorite() {
     renderSavedCharacters();
 
       // shift other favorites to next card
-      
+
 
 }
 
@@ -176,4 +175,4 @@ init();
 
 
 
-      
+
