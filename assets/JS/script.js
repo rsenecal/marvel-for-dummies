@@ -37,6 +37,23 @@ function getResultsMarvel(selectedChar)
       response.json().then(function(marvelData){
         var marvelResults = marvelData.data.results;
         console.log("Data from marvel: ", marvelResults);
+
+        var description = marvelResults[0].description;
+        console.log("Description: ", description);
+        var El = document.getElementById("marvel-description");
+        El.textContent = description;
+
+        var series = marvelResults[0].series;
+        console.log("Series: ", series);
+        // for (i = 0; i <= items.length; i++) {
+        //   var li = document.createElement("li"); // create li element.
+
+        //   li.innerHTML = item[i]; // assigning text to li using array value.
+
+        //   var seriesEl = document.getElementById("series-links");
+        //   seriesEl.appendChild(li); // append li to ul.
+        // }
+
       })
     }
   })
