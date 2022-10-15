@@ -65,7 +65,12 @@ function getResultsMarvel(selectedChar)
         // var comics = marvelResults[0].comics.items;
         // console.log("Comics: ", comics);
 
-
+        var comics1 = document.getElementById("comics-1");
+        comics1.textContent = marvelResults[0].series.items[1].name;
+        var comics2 = document.getElementById("comics-2");
+        comics2.textContent = marvelResults[0].series.items[2].name;
+        var comics3 = document.getElementById("comics-3");
+        comics3.textContent = marvelResults[0].series.items[3].name;
 
       })
     }
