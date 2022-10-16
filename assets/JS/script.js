@@ -121,12 +121,6 @@ function init () {
   getImages();
 }
 
-
-function init () {
-  renderSavedCharacters();
-  getImages();
-}
-
 function saveFavorite() {
     console.log(charSearchEl.val());
     favoriteCharacters.unshift(charSearchEl.val());
@@ -145,6 +139,7 @@ function renderSavedCharacters() {
 
 // add thumbnails to favorites
   function getImages() {
+
     var apiMarvel1 = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[0]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
     fetch(apiMarvel1)
     .then(function(response){
@@ -201,4 +196,4 @@ getImages();
 init();
 
 
-
+  
