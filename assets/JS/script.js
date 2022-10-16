@@ -31,7 +31,7 @@ $( function() {
 function getResultsMarvel(selectedChar)
  {
   let apiMarvel = `https://gateway.marvel.com:443/v1/public/characters?name=${ selectedChar }&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
-  // console.log("API LINK : " + apiMarvel);
+  console.log("API LINK : " + apiMarvel);
   fetch(apiMarvel).then(function(response){
     if (response.status == 200){
       response.json().then(function(marvelData){
@@ -43,35 +43,30 @@ function getResultsMarvel(selectedChar)
         var El = document.getElementById("marvel-description");
         El.textContent = description;
 
-        var allSeries = marvelResults[0].series.items;
+        // for loop iterationg through items object
+        let allSeries = marvelResults[0].series.items;
 
-        var series1 = document.getElementById("series-1");
-        series1.textContent = marvelResults[0].series.items[0].name;
-        var series2 = document.getElementById("series-2");
-        series2.textContent = marvelResults[0].series.items[1].name;
-        var series3 = document.getElementById("series-3");
-        series3.textContent = marvelResults[0].series.items[2].name;
+          for (i = 0; i < allSeries.length; i++) {
+            let series = document.createElement("li"); // create li element.
+
+            series.innerHTML = allSeries[i].name; // assigning name of series to li using array value.
+
+            let seriesEl = document.getElementById("series-links");
+            seriesEl.appendChild(series); // append li to ul (#series-links).
+          }
+
+        var allComics = marvelResults[0].comics.items;
+        console.log("Comics: ", allComics);
 
 
-        // for (i = 0; i <= allSeries.length; i++) {
-        //   let series = document.createElement("li"); // create li element.
+          for (i = 0; i < allComics.length; i++) {
+            let comics = document.createElement("li"); // create li element.
 
-        //   series.innerHTML = allSeries[i].name; // assigning text to li using array value.
+            comics.innerHTML = allComics[i].name; // assigning name of comics to li using array value.
 
-        //   var seriesEl = document.getElementById("series-links");
-        //   seriesEl.appendChild(series); // append li to ul.
-        // }
-
-        // var comics = marvelResults[0].comics.items;
-        // console.log("Comics: ", comics);
-
-        var comics1 = document.getElementById("comics-1");
-        comics1.textContent = marvelResults[0].series.items[0].name;
-        var comics2 = document.getElementById("comics-2");
-        comics2.textContent = marvelResults[0].series.items[1].name;
-        var comics3 = document.getElementById("comics-3");
-        comics3.textContent = marvelResults[0].series.items[2].name;
-
+            let comicsEl = document.getElementById("comics-links");
+            comicsEl.appendChild(comics); // append li to ul(#comics-list).
+        }
       })
     }
   })

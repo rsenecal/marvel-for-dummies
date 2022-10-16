@@ -1003,6 +1003,7 @@ marvelChars = [
     "Spider-Girl",
     "Spider-Ham",
     "Spider-Man",
+    "Spider-Man (Peter Parker)",
     "Spider-Woman",
     "Spiral",
     "Spirit",
