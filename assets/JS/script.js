@@ -96,12 +96,30 @@ function getResultsGiphy(selectedChar)
   // console.log("Character Name: " + charName);
 }
 
+// favorites
+
+// DEPENDENCIES
+
+var saveButton = $('#save-fav');
+var charSearchEl = $('#char-search');
+var charName1 = $('#char-name-1');
+var charName2 = $('#char-name-2');
+var charName3 = $('#char-name-3');
+var charName4 = $('#char-name-4');
+var charImage1 = $('#char-image-1');
+var charImage2 = $('#char-image-2');
+var charImage3 = $('#char-image-3');
+var charImage4 = $('#char-image-4');
+
+
+// DATA
 var favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) || [];
 
 
 // get data from local storage
 function init () {
   renderSavedCharacters();
+  getImages();
 }
 
 function saveFavorite() {
@@ -110,6 +128,7 @@ function saveFavorite() {
     console.log(favoriteCharacters);
     localStorage.setItem("favoriteCharacters", JSON.stringify(favoriteCharacters));
     renderSavedCharacters();
+    getImages();
 }
 
 function renderSavedCharacters() {
@@ -120,26 +139,61 @@ function renderSavedCharacters() {
 }
 
 // add thumbnails to favorites
-  function getImage() {
-    var apiMarvel = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[0]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
-    fetch(apiMarvel)
+  function getImages() {
+    var apiMarvel1 = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[0]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
+    fetch(apiMarvel1)
     .then(function(response){
       return response.json();
     })
     .then (function(data){
-      console.log(data.data.results[0].thumbnail.path);
       var imagePath = data.data.results[0].thumbnail.path;
       var imageExt = data.data.results[0].thumbnail.extension;
       var imageURL = imagePath + "." + imageExt; 
       charImage1.attr('src', imageURL);
     })
+    var apiMarvel2 = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[1]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
+    fetch(apiMarvel2)
+    .then(function(response){
+      return response.json();
+    })
+    .then (function(data){
+      var imagePath = data.data.results[0].thumbnail.path;
+      var imageExt = data.data.results[0].thumbnail.extension;
+      var imageURL = imagePath + "." + imageExt; 
+      charImage2.attr('src', imageURL);
+    })
+    var apiMarvel3 = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[2]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
+    fetch(apiMarvel3)
+    .then(function(response){
+      return response.json();
+    })
+    .then (function(data){
+      var imagePath = data.data.results[0].thumbnail.path;
+      var imageExt = data.data.results[0].thumbnail.extension;
+      var imageURL = imagePath + "." + imageExt; 
+      charImage3.attr('src', imageURL);
+    })
+    var apiMarvel4 = `https://gateway.marvel.com:443/v1/public/characters?name=${favoriteCharacters[3]}&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
+    fetch(apiMarvel4)
+    .then(function(response){
+      return response.json();
+    })
+    .then (function(data){
+      var imagePath = data.data.results[0].thumbnail.path;
+      var imageExt = data.data.results[0].thumbnail.extension;
+      var imageURL = imagePath + "." + imageExt; 
+      charImage4.attr('src', imageURL);
+    })
     }
+
     
  
 
 
 // INITIALIZATION
 saveButton.on('click', saveFavorite);
+getImages();
 init();
-getImage();
+
+
 
