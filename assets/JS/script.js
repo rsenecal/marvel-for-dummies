@@ -43,34 +43,34 @@ function getResultsMarvel(selectedChar)
         var El = document.getElementById("marvel-description");
         El.textContent = description;
 
-        // var series = marvelResults[0].series.items[0].name;
+        var allSeries = marvelResults[0].series.items;
 
         var series1 = document.getElementById("series-1");
-        series1.textContent = marvelResults[0].series.items[1].name;
+        series1.textContent = marvelResults[0].series.items[0].name;
         var series2 = document.getElementById("series-2");
-        series2.textContent = marvelResults[0].series.items[2].name;
+        series2.textContent = marvelResults[0].series.items[1].name;
         var series3 = document.getElementById("series-3");
-        series3.textContent = marvelResults[0].series.items[3].name;
+        series3.textContent = marvelResults[0].series.items[2].name;
 
 
-        // for (i = 0; i <= getSeries.length; i++) {
-        //   var li = document.createElement("li"); // create li element.
+        // for (i = 0; i <= allSeries.length; i++) {
+        //   let series = document.createElement("li"); // create li element.
 
-        //   li.innerHTML = marvelResults[0].series.items[0]; // assigning text to li using array value.
+        //   series.innerHTML = allSeries[i].name; // assigning text to li using array value.
 
         //   var seriesEl = document.getElementById("series-links");
-        //   seriesEl.appendChild(li); // append li to ul.
+        //   seriesEl.appendChild(series); // append li to ul.
         // }
 
         // var comics = marvelResults[0].comics.items;
         // console.log("Comics: ", comics);
 
         var comics1 = document.getElementById("comics-1");
-        comics1.textContent = marvelResults[0].series.items[1].name;
+        comics1.textContent = marvelResults[0].series.items[0].name;
         var comics2 = document.getElementById("comics-2");
-        comics2.textContent = marvelResults[0].series.items[2].name;
+        comics2.textContent = marvelResults[0].series.items[1].name;
         var comics3 = document.getElementById("comics-3");
-        comics3.textContent = marvelResults[0].series.items[3].name;
+        comics3.textContent = marvelResults[0].series.items[2].name;
 
       })
     }
