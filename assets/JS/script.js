@@ -28,6 +28,7 @@ $( function() {
 
 // getResultsMarvel();
 
+
 function getResultsMarvel(selectedChar)
  {
   let apiMarvel = `https://gateway.marvel.com:443/v1/public/characters?name=${ selectedChar }&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
@@ -36,9 +37,12 @@ function getResultsMarvel(selectedChar)
     if (response.status == 200){
       response.json().then(function(marvelData){
         var marvelResults = marvelData.data.results;
-        console.log("Data from marvel: ", marvelResults);
+        // console.log("Data from marvel: ", marvelResults);
 
         var description = marvelResults[0].description;
+        if (description.length == 0) {
+          description = `No description for this Character in the Marvel API please visit https://en.wikipedia.org/wiki/Main_Page`;
+        }
         console.log("Description: ", description);
         var El = document.getElementById("marvel-description");
         El.textContent = description;
