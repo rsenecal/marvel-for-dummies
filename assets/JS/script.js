@@ -23,30 +23,26 @@ $( function() {
 } );
 
 // Fetch the data from Marvel API, using the selected character from autocomplete field.
-function getResultsMarvel(selectedChar){
+function getResultsMarvel(selectedChar)
+ {
   let apiMarvel = `https://gateway.marvel.com:443/v1/public/characters?name=${ selectedChar }&ts=1&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4`
   console.log("API LINK : " + apiMarvel);
   fetch(apiMarvel).then(function(response){
     if (response.status == 200){
       response.json().then(function(marvelData){
-        let marvelResults = marvelData.data.results;
+        var marvelResults = marvelData.data.results;
+        // console.log("Data from marvel: ", marvelResults);
 
-        if (marvelResults.length) {  //validation if character name is in Marvel API character array
+        var description = marvelResults[0].description;
+        if (description.length == 0) {
+          description = `No description for this Character in the Marvel API please visit https://en.wikipedia.org/wiki/Main_Page`;
+        }
+        console.log("Description: ", description);
+        var El = document.getElementById("marvel-description");
+        El.textContent = description;
 
-          console.log("Data from marvel: ", marvelResults);
-
-          let description = marvelResults[0].description;
-          if (description.length === 0) { // if character name is in the API but it has no description
-            console.log("description is empty: " + description);
-            description = `No description for this Character in the Marvel API please visit https://en.wikipedia.org/wiki/Main_Page`;
-
-          }
-          console.log("Description: ", description);
-          let El = document.getElementById("marvel-description");
-          El.textContent = description;
-
-          // for loop iterationg through items object
-          let allSeries = marvelResults[0].series.items;
+        // for loop iterationg through items object
+        let allSeries = marvelResults[0].series.items;
 
           for (i = 0; i < allSeries.length; i++) {
             let series = document.createElement("li"); // create li element.
@@ -57,8 +53,8 @@ function getResultsMarvel(selectedChar){
             seriesEl.appendChild(series); // append li to ul (#series-links).
           }
 
-          let allComics = marvelResults[0].comics.items;
-          console.log("Comics: ", allComics);
+        var allComics = marvelResults[0].comics.items;
+        console.log("Comics: ", allComics);
 
 
           for (i = 0; i < allComics.length; i++) {
@@ -69,14 +65,7 @@ function getResultsMarvel(selectedChar){
             let comicsEl = document.getElementById("comics-links");
             comicsEl.appendChild(comics); // append li to ul(#comics-list).
           }
-        }
-        else { // if character name is not in Marvel API character array
-          let description = `No description for this Character in the Marvel API please visit https://en.wikipedia.org/wiki/Main_Page`;
-          let El = document.getElementById("marvel-description");
-          El.textContent = description;
-          console.log("No description for this Character in the Marvel API please visit https://en.wikipedia.org/wiki/Main_Page");
-        }
-     })
+      })
     }
   })
 }
@@ -91,7 +80,7 @@ function getResultsGiphy(selectedChar){
         let giphyResults = giphyData.data[0].images.original.url;
         console.log("Data from giphy: ", giphyResults);
         $("#featured-image").attr("src",giphyResults);
-        $("#featured-image”).attr(“alt","Display image of your selected character");
+        $("#featured-image").attr("alt", "Display image of your selected character");
       })
     }
   })
