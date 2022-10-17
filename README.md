@@ -4,10 +4,10 @@ Marvel for Dummies
 
 Maybe comics was not your thing, maybe Marvel was not for you. Maybe you know all about wetworks from Wildstorm, but that world is no longer viable. Marvel has taking over the real world. You are not watching superhero movies, had no desire to learn about fictional characters. However, your current friends are obsessed with Marvel and love talking about past, current and future movies.
 
--Friends are die hard Marvel fans
--Having issues learning about characters
--Unable to participate in conversation
--Excluded from gatherings
+-Friends are die hard Marvel fans  
+-Having issues learning about characters  
+-Unable to participate in conversation  
+-Excluded from gatherings  
 
 NEVER FEAR: Marvel for Dummies is the app for you.
 ### Website :
@@ -33,6 +33,6 @@ git@github.com:malvinaH/marvel-for-dummies.git
 ![Affter searching information](./assets/images/MFD-screenshot2.png?raw=true "Malrvel for Dummies 2")
 ![Saved search data](./assets/images/MFD-screenshot3.png?raw=true "Marvel for Dummies 3")
 
-## Licence
+## License
 
 This is an open source project.

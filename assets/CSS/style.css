@@ -1,6 +1,6 @@
 /* Global variables */
 :root {
-    --site-background: radial-gradient(circle, rgba(169,235,236,1) 0%, rgba(253,187,45,1) 100%);
+    --site-background: radial-gradient(circle, rgba(169, 235, 236, 1) 0%, rgba(253, 187, 45, 1) 100%);
     --cardheaderbackground: #79ccdf;
     --cardtitlecolor: #fac63a;
     --btncolor: #cd2c35;
@@ -8,7 +8,7 @@
     --sitefontfamily2: font-family: 'Bangers', cursive;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -87,12 +87,12 @@ section.section.is-medium.info-container {
 }
 
 #marvel-comics,
-#marvel-series{
+#marvel-series {
     background-color: var(--cardheaderbackground);
 }
 
 #comics-title,
-#series-title{
+#series-title {
     font-size: large;
     color: #eee;
 }
@@ -191,7 +191,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 765px){
+@media screen and (min-width: 765px) {
     #logo {
         margin-left: 2%;
     }
