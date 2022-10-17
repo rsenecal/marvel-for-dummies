@@ -1,5 +1,7 @@
 ## Description
 
+Marvel for Dummies
+
 Maybe comics was not your thing, maybe Marvel was not for you. Maybe you know all about wetworks from Wildstorm, but that world is no longer viable. Marvel has taking over the real world. You are not watching superhero movies, had no desire to learn about fictional characters. However, your current friends are obsessed with Marvel and love talking about past, current and future movies.
 
 -Friends are die hard Marvel fans  
@@ -7,7 +9,7 @@ Maybe comics was not your thing, maybe Marvel was not for you. Maybe you know al
 -Unable to participate in conversation  
 -Excluded from gatherings  
 
-NEVER FEAR: Marvel for Dummies is the app for you. 
+NEVER FEAR: Marvel for Dummies is the app for you.
 ### Website :
  ```sh
    https://malvinah.github.io/marvel-for-dummies/
