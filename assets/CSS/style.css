@@ -17,6 +17,7 @@
     /* border : red solid 1px; */
 }
 
+/* body */
 body {
     font-family: var(--sitefontfamily);
     padding-top: 50px;
@@ -24,8 +25,8 @@ body {
     background: var(--site-background)
 }
 
-/* Heading */
 
+/* Heading */
 .hero-head {
     /* background: var(--site-background); */
     margin-top: 1em;
@@ -55,6 +56,7 @@ body {
     margin-left: 2em;
     border-radius: 1em;
 }
+
 
 /* Main section */
 #featured-image {
@@ -151,10 +153,13 @@ section.section.is-medium.info-container {
     border-bottom-right-radius: 2em;
 }
 
+
 /* Footer */
 footer {
     text-align: center;
 }
+
+
 
 /* Media queries */
 @media screen and (min-width: 365px) {

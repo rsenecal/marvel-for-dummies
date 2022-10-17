@@ -1,12 +1,7 @@
-
+//Marvel API
 var marvelRequestUrl = "https://gateway.marvel.com:443/v1/public/characters?"
 var marvelApiKey  = "abdfd77b47499bf8bf3a7ee7d53b30a4"
-
 var marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=100&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
-
-var vineRequestUrl = "https://comicvine.gamespot.com/api/characters/?api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON&limit=10"
-
-var vineSearchUrl = "https://comicvine.gamespot.com/api/search/?query=thor&resources=character&api_key=84b5c7942b49eb33ea48d45716e0e2336811cd22&format=JSON&limit=10"
 
 // Search characters using a pre-populated list of characters.
 $( function() {
