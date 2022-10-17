@@ -1,5 +1,6 @@
+/* Global variables */
 :root {
-    --site-background: radial-gradient(circle, rgba(169,235,236,1) 0%, rgba(253,187,45,1) 100%);
+    --site-background: radial-gradient(circle, rgba(169, 235, 236, 1) 0%, rgba(253, 187, 45, 1) 100%);
     --cardheaderbackground: #79ccdf;
     --cardtitlecolor: #fac63a;
     --btncolor: #cd2c35;
@@ -7,7 +8,7 @@
     --sitefontfamily2: font-family: 'Bangers', cursive;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -16,12 +17,19 @@
     /* border : red solid 1px; */
 }
 
+/* body */
 body {
     font-family: var(--sitefontfamily);
     padding-top: 50px;
-    /* background-color: #16f7d5; */
     line-height: 1.5;
     background: var(--site-background)
+}
+
+
+/* Heading */
+.hero-head {
+    /* background: var(--site-background); */
+    margin-top: 1em;
 }
 
 #char-search {
@@ -49,12 +57,27 @@ body {
     border-radius: 1em;
 }
 
+
+/* Main section */
 #featured-image {
     padding-top: 3em;
 }
 
 section.section.is-medium.info-container {
     padding: 5em 1.5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.columns{
+    margin: .5rem;
+    padding: .5rem;
 }
 
 #marvel-description {
@@ -64,12 +87,12 @@ section.section.is-medium.info-container {
 }
 
 #marvel-comics,
-#marvel-series{
+#marvel-series {
     background-color: var(--cardheaderbackground);
 }
 
 #comics-title,
-#series-title{
+#series-title {
     font-size: large;
     color: #eee;
 }
@@ -79,6 +102,7 @@ section.section.is-medium.info-container {
     font-family: 'Franklin Gothic Medium', sans-serif;
 }
 
+/* Save to favorite and favorites section */
 #char-name-1,
 #char-name-2,
 #char-name-3,
@@ -95,11 +119,6 @@ section.section.is-medium.info-container {
     font-family: var(--sitefontfamily);
 }
 
-.hero-head {
-    /* background: var(--site-background); */
-    margin-top: 1em;
-}
-
 #favorite-characters {
     margin-top: 1.5em;
     margin-right: 1.5em;
@@ -114,26 +133,9 @@ section.section.is-medium.info-container {
     font-size: 50px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-}
-
-.columns{
-    margin: .5rem;
-    padding: .5rem;
-}
-
 .favorite-button {
     display: flex;
     justify-content: center;
-}
-
-.cards-container {
-    display: flex;
 }
 
 .favorite-characters h2,
@@ -152,10 +154,14 @@ section.section.is-medium.info-container {
 }
 
 
+/* Footer */
 footer {
     text-align: center;
 }
 
+
+
+/* Media queries */
 @media screen and (min-width: 365px) {
     #logo {
         margin: 0 auto;
@@ -185,7 +191,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 765px){
+@media screen and (min-width: 765px) {
     #logo {
         margin-left: 2%;
     }
