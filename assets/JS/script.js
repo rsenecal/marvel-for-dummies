@@ -1,7 +1,7 @@
 //Marvel API
-var marvelRequestUrl = "https://gateway.marvel.com:443/v1/public/characters?"
-var marvelApiKey  = "abdfd77b47499bf8bf3a7ee7d53b30a4"
-var marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=100&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
+const marvelRequestUrl = "https://gateway.marvel.com:443/v1/public/characters?"
+const marvelApiKey  = "abdfd77b47499bf8bf3a7ee7d53b30a4"
+const marvelCharNameUrl = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-modified&limit=100&apikey=abdfd77b47499bf8bf3a7ee7d53b30a4"
 
 // Search characters using a pre-populated list of characters.
 $( function() {
@@ -64,23 +64,23 @@ function getResultsMarvel(selectedChar)
 
             let comicsEl = document.getElementById("comics-links");
             comicsEl.appendChild(comics); // append li to ul(#comics-list).
-        }
+          }
       })
     }
   })
 }
 
 // Fetch images using Giphy API and change the image attr in the DOM.
-function getResultsGiphy(selectedChar)
- {
+function getResultsGiphy(selectedChar){
   let apiGiphy = `https://api.giphy.com/v1/gifs/search?api_key=i5MHnuo6MC25j3nApRcBmFJn4LyxNJXT&q=marvel%20${ selectedChar }&limit=1&offset=0&rating=g&lang=en`
   // console.log("API LINK : " + apiMarvel);
   fetch(apiGiphy).then(function(response){
     if (response.status == 200){
       response.json().then(function(giphyData){
-        var giphyResults = giphyData.data[0].images.original.url;
+        let giphyResults = giphyData.data[0].images.original.url;
         console.log("Data from giphy: ", giphyResults);
         $("#featured-image").attr("src",giphyResults);
+        $("#featured-image").attr("alt", "Display image of your selected character");
       })
     }
   })
